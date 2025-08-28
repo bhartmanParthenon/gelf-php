@@ -80,6 +80,7 @@ class MessageValidator implements MessageValidatorInterface
         if (!$this->validate0100($message, $reason)) {
             return false;
         }
+        //An even more important comment
 
         foreach ($message->getAllAdditionals() as $key => $value) {
             if (!preg_match('#^[\w\.\-]*$#', (string)$key)) {
